@@ -1,4 +1,4 @@
-package pedroppaf.stock_flow.product;
+package pedroppaf.stock_flow.product.model;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
@@ -32,11 +32,11 @@ public class Product {
     @Column(name = "sale_price", precision = 19, scale = 4)
     private BigDecimal salePrice = BigDecimal.ZERO;
 
-    @Column(length = 20)
-    private String unit;
-
     @Column(name = "stock_min")
     private Integer stockMin;
+
+    @Column(length = 20)
+    private String unit;
 
     @Column(name = "created_at", nullable = false)
     private OffsetDateTime createdAt;
